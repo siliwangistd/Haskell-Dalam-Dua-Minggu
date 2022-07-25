@@ -1,5 +1,5 @@
 # belajar-haskell
-Hai! Repo ini ditujukan untuk kamu yang belum pernah mengenal bahasa pemograman atau belum pernah mengenal pemogramman fungsional. 
+Hai! Repo ini ditujukan untuk kamu yang ingin mempelajari bahasa pemogramman Haskell. Haskell adalah bahasa pemograman dengan paradigma pemograman fungsional. Materi yang diajarkan ditujukan bagi siapun yang belum mengenal bahasa pemogramman atau bagi yang ingin mempelajari pemograman fungsional dengan bahasa Haskell.
 
 ## Postulat Sabda
 1. Konsep Sama Dengan
