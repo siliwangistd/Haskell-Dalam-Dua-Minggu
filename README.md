@@ -6,6 +6,7 @@ Hai! Repo ini ditujukan untuk kamu yang ingin mempelajari bahasa pemograman Hask
 2. Mempertahankan Kesamaan
 3. Prinsip Konektivitas
 
+
 ## Data & Fungsi
 
 ## Tipe Data
