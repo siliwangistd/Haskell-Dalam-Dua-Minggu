@@ -5,6 +5,8 @@ module Jawaban where
 
 import Data.List
 
+myList = [1..20]
+
 -- 1.a
 
 null' [] = True
@@ -12,11 +14,15 @@ null' xs = False
 
 --pembatas
 
-take' x = x
+take' 0 _ = []
+take' m [] = []
+take' m (x:xs) = x : take' (m-1) xs
 
 --pembatas
 
-drop' x = x
+drop' 0 xs = xs
+drop' m [] = []
+drop' m (x:xs) = drop' (m-1) xs
 
 --pembatas
 
