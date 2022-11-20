@@ -7,7 +7,8 @@ import Data.List
 
 -- 1.a
 
-null' x = x
+null' [] = True
+null' xs = False
 
 --pembatas
 
