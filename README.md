@@ -6,8 +6,8 @@ Hai! Repo ini ditujukan untuk kamu yang ingin mempelajari bahasa pemograman Hask
 2. Mempertahankan Kesamaan
 3. Prinsip Konektivitas
 
-
 ## Data & Fungsi
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus convallis tortor, et venenatis mauris sagittis id. Cras scelerisque a enim sit amet commodo. Pellentesque sed magna vel magna pharetra mollis. Aenean dolor lorem, pharetra et justo vel, rutrum vulputate est. Nam non quam ultrices, placerat dui non, condimentum mauris. Nullam auctor dui eget volutpat tincidunt. Morbi ac velit enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus dignissim rutrum ex sed congue. Proin auctor, neque nec vulputate lacinia, arcu purus efficitur mauris, ac efficitur urna ligula sed leo. Vivamus convallis est tortor, ac vulputate ligula malesuada ac. Nulla dapibus mi ante, in fringilla nisi lacinia imperdiet. Sed in enim nibh. Duis enim nulla, porttitor vitae nibh et, bibendum posuere ex.
 
 ## Tipe Data
  - Int
@@ -27,7 +27,10 @@ Hai! Repo ini ditujukan untuk kamu yang ingin mempelajari bahasa pemograman Hask
  - _Let - In_
 
 ## _Recursion_
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus convallis tortor, et venenatis mauris sagittis id. Cras scelerisque a enim sit amet commodo. Pellentesque sed magna vel magna pharetra mollis. Aenean dolor lorem, pharetra et justo vel, rutrum vulputate est. Nam non quam ultrices, placerat dui non, condimentum mauris. Nullam auctor dui eget volutpat tincidunt. Morbi ac velit enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus dignissim rutrum ex sed congue. Proin auctor, neque nec vulputate lacinia, arcu purus efficitur mauris, ac efficitur urna ligula sed leo. Vivamus convallis est tortor, ac vulputate ligula malesuada ac. Nulla dapibus mi ante, in fringilla nisi lacinia imperdiet. Sed in enim nibh. Duis enim nulla, porttitor vitae nibh et, bibendum posuere ex.
 
 ## _Higher Order Functions_
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus convallis tortor, et venenatis mauris sagittis id. Cras scelerisque a enim sit amet commodo. Pellentesque sed magna vel magna pharetra mollis. Aenean dolor lorem, pharetra et justo vel, rutrum vulputate est. Nam non quam ultrices, placerat dui non, condimentum mauris. Nullam auctor dui eget volutpat tincidunt. Morbi ac velit enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus dignissim rutrum ex sed congue. Proin auctor, neque nec vulputate lacinia, arcu purus efficitur mauris, ac efficitur urna ligula sed leo. Vivamus convallis est tortor, ac vulputate ligula malesuada ac. Nulla dapibus mi ante, in fringilla nisi lacinia imperdiet. Sed in enim nibh. Duis enim nulla, porttitor vitae nibh et, bibendum posuere ex.
 
 ## _Modules_
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus convallis tortor, et venenatis mauris sagittis id. Cras scelerisque a enim sit amet commodo. Pellentesque sed magna vel magna pharetra mollis. Aenean dolor lorem, pharetra et justo vel, rutrum vulputate est. Nam non quam ultrices, placerat dui non, condimentum mauris. Nullam auctor dui eget volutpat tincidunt. Morbi ac velit enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus dignissim rutrum ex sed congue. Proin auctor, neque nec vulputate lacinia, arcu purus efficitur mauris, ac efficitur urna ligula sed leo. Vivamus convallis est tortor, ac vulputate ligula malesuada ac. Nulla dapibus mi ante, in fringilla nisi lacinia imperdiet. Sed in enim nibh. Duis enim nulla, porttitor vitae nibh et, bibendum posuere ex.
