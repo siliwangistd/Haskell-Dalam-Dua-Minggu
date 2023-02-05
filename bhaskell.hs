@@ -35,7 +35,10 @@ isKecil x
 -- Jalanin repl
 ------- source di repl
 
-
+kecap a b c i
+  | i == 1 = (-b + det) / 2*a
+  | i == 2 = (-b - det) / 2*a
+  where det = sqrt(b^2 - (4*a*c))
 
 
 
