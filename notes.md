@@ -1,0 +1,17 @@
+-- Data & Functions
+-- Data types
+---- Primitives
+-------- number
+-------- char
+-------- boolean
+---- Collective
+-------- list
+-------- tuple
+-- Functions
+---- Pattern matching
+---- Guards
+---- Let
+---- Where
+-- Recursion
+-- Higher order function
+-- Modules
