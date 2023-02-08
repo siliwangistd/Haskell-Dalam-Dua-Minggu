@@ -5,51 +5,94 @@ module Template where
 
 import Data.List
 
--- 1.a
+-- memberukan value berupaa boolean true jika list kosong dan sebaliknya
 
-null' x = x
+null' [] = True
+null' (x:xs) = False
 
---pembatas
+-- take 3 dari 1..10
+-- langkah 1 : take n tapi list kosong = []
+-- langkah 2 : take' 3 (1:2,3,4,5) =
 
-take' x = x
+take' n [] = []
+take' 0 _ = []
+take' n (x:xs) = x : take' (n-1) xs
 
---pembatas
+--fungsi drop' int -> [a] -> [a]
+-- if n >= [a] = [] (Habis)
+-- if n <= [a] = [a]
 
-drop' x = x
+drop' _ [] = []
+drop' 0 xs = xs
+drop' n (x:xs) = drop' (n-1) xs
 
---pembatas
+-- drop' 3 dari List
+-- jika drop' 3 dari [1,2,3,4,5] = [4,5]
+-- maka drop' 3 ([1,2,3]:[4,5]) = drop' (3-1) dari [1,2,3] + [4,5] => [3,4,5]
+-- drop' 2  dari [1,2,3,4,5] = drop' (2-1) dari [1,2] + [3,4,5] => [2,3,4,5]
+-- drop' 1  dari [1,2,3,4,5] = drop' (1-1) dari [1]+[2,3,4,5] = [1,2,3,4,5]
+-- seterusnya, drop' 0 dari [1,2,3,4,5] maka [1,2,3,4,5]
 
-fst' x = x
+tin m = m + 1
 
---pembatas
+-- fst :: (a,b) -> a
+-- mengembalikan item pertama dari tuples
 
-snd' x = x
+fst' (a,b) = a
 
---pembatas
+--mengembalikan item kedua dari tuples
 
-map' x = x
+snd' (a,b) = b
 
---pembatas
+--map :: (a -> b) -> [a] -> [b]
+-- mamasukan fungsi ke dalam list yang ditentukan
+
+
+map' n = n
+
+-- filter :: (a -> Bool) -> [a] -> [a]
+-- filter memasukan fungsi boolean kepada list untuk mengambil
+-- list dan dikembalikan menjadi list
 
 filter' x = x
 
---pembatas
 
-delete' x = x
+-- filter' :: (a -> Bool) -> [a] -> [a]
 
---pembatas
 
-deleteAll' x = x
+--delete :: Eq a => a -> [a] -> [a]
+-- delete akan menghasilkan list yang telah dikurangi oleh "a"
+-- syarat nya "n" harus berada di dalam list, jika tidak maaka akan mengembalikan
+-- list tana ada perubahan
 
---pembatas
+delete' _ [] = [] --delete' masukan apapun kalau list kosong ya kosong
+delete' n (x:xs) -- masukan n kepada [list] maka akan menegembalikan sisa list kalau ->
+  | n == x = xs -- kalau n bearada di dalam list maka kembalikan sisa list
+  | otherwise = x : delete' n xs -- kalau tidak equal maka kembalikan list
+
+--deleteAll :: Eq a => a -> [a] -> [a]
+--deletAll' masukan apapun kalau list kosong maka kosing
+-- deletall' masukan "n" ke dalam list yang harus ada  "n" maka
+-- | n == x = deleteAll' n xs yang artinya n harus sama dengan elemen yang ada di List
+-- jika ya maka akan secara recursive dipanggil ke sisa list (xs)
+-- jika tidak match maka n akan dipanggil ke sisa list (lagi)
+-- perbedaan denga delete fungsi ini mengambil semua yang equal dengan "n"
+-- sementara delete' hanya mengambil di list pertama yang equal dgn  "n"
+
+deleteAll' _ [] = []
+deleteAll' n (x:xs)
+  | n == x = deleteAll' n xs
+  | otherwise = x : deleteAll' n xs
+
+--foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
 
 foldl' x = x
 
---pembatas
+--foldl1 :: Foldable t => (a -> a -> a) -> t a -> a (ini apa anjir)
 
 foldl1' x = x
 
---pembatas
+--zip :: [a] -> [b] -> [(a, b)], menggabungkan 2 list atau lebih ke dalam satu list
 
 zip' x = x
 
