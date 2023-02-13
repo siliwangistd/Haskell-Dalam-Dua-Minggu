@@ -1,7 +1,7 @@
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
-module Jawaban where
+module Kunjaw where
 
 import Data.List
 
@@ -26,19 +26,23 @@ drop' m (x:xs) = drop' (m-1) xs
 
 --pembatas
 
-fst' x = x
+fst' (a, b) = a
 
 --pembatas
 
-snd' x = x
+snd' (a, b) = b
 
 --pembatas
 
-map' x = x
+map' fn [] = []
+map' fn (x:xs) = fn x : map fn xs
 
 --pembatas
 
-filter' x = x
+filter' fn [] = []
+filter' fn (x:xs)
+  | fn x == True = x : filter' fn xs
+  | otherwise = filter' fn xs
 
 --pembatas
 
@@ -86,23 +90,25 @@ notElem' x = x
 
 --pembatas
 
-head' x = x
+head' (x:xs) = x
 
 --pembatas
 
-length' x = x
+length' [] = 0
+length' (x:xs) = 1 + length' xs
 
 --pembatas
 
-reverse' x = x
+reverse' [] = []
+reverse' (x:xs) = reverse' xs ++ [x]
 
 --pembatas
 
-last' x = x
+last' xs = head' (reverse' xs)
 
 --pembatas
 
-tail' x = x
+tail' (x:xs) = xs
 
 --pembatas
 
