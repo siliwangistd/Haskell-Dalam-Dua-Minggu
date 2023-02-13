@@ -6,6 +6,7 @@
 -------- boolean
 ---- Collective
 -------- list
+----------- list comprehension
 -------- tuple
 -- Functions
 ---- Pattern matching
