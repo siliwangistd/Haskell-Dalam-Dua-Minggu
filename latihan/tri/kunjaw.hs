@@ -46,11 +46,36 @@ filter' fn (x:xs)
 
 --pembatas
 
-delete' x = x
+-- Hypothesis 1
+delete' m [] = []
+delete' m (x:xs)
+  | m == x = xs
+  | otherwise = x : delete' m xs
+
+-- delete' 2 [1,2,3,2,2,3]
+-- delete' 2 (1:[2,3,2,2,3])
+--    | otherwise = 1 : delete' 2 [2,3,2,2,3] => 1:[3,2,2,3]
+--    | 2 == 2 = [3,2,2,3] => [3,2,2,3]
 
 --pembatas
 
-deleteAll' x = x
+-- Hypothesis 1
+deleteAll' m [] = []
+deleteAll' m (x:xs)
+  | m == x = deleteAll' m xs
+  | otherwise = x : deleteAll' m xs
+
+-- deleteAll' 2 [1,2,2,3,4,2]
+-- deleteAll' 2 (1:[2,2,3,4,2])
+--    | otherwise = 1 : deleteAll' 2 (2:[2,3,4,2]) => 1:3:4:[] => [1,3,4]
+--    | 2 == 2 = deleteAll' 2 (2:[3,4,2]) => 3:4:[]
+--    | 2 == 2 = deleteAll' 2 (3:[4,2]) => 3:4:[]
+--    | otherwise = 3 : deleteAll' 2 (4:[2]) => 3:4:[]
+--    | otherwise = 4 : deleteAll' 2 (2:[]) => 4:[]
+--    | 2 == 2 = deleteAll' 2 [] => []
+-- deleteAll m [] = [] => []
+
+
 
 --pembatas
 

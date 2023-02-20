@@ -18,7 +18,7 @@
 -- Higher order function
 -- Modules
 
-module Bhaskell where
+module Two where
 
 add x = x + x
 
@@ -73,6 +73,28 @@ rumusKecap a b c i
   | i == 1 = ((-b) + det) / (2*a)
   | i == 2 = ((-b) - det) / (2*a)
   where det = sqrt(b^2 - (4*a*c))
+
+map' fn [] = []
+map' fn (x:xs) = fn x : map' fn xs
+
+-- add x = x + 2
+-- map' add [1,2,3,4,5]
+
+-- map' add (1:[2,3,4,5]) => (add 1 = 1 + 2) : map' add [2,3,4,5]
+-- map' add (2:[3,4,5]) = (add 2 = 2 + 2) : map' add [3,4,5]
+-- map' add (3:[4,5]) = (add 3 = 3 + 2) : map' add [4,5]
+-- map' add (4:[5]) = (add 4 = 4 + 2) : map' add [5]
+-- map' add (5:[]) = (add 5 = 5 + 2) : map' add []
+-- map' add [] = []
+
+takevarna m = "thu hema varna"
+
+take' m [] = []
+take' 0 _ = []
+take' m (blagoo:soffan) = x : take' (
+
+
+
 
 
 
