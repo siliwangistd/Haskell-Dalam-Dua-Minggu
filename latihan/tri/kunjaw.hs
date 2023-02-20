@@ -82,11 +82,18 @@ foldl'' fn m (x:xs) = foldl'' fn (fn m x) xs
 -- foldl'' (\x y -> x / y) 15 [5,3]
 -- foldl'' (\x y -> x / y) 15 (5:[3]) = foldl'' (\x y -> x / y) (\15 5 -> 15 / 5) (3:[]) => 15/5 => 3
 -- foldl'' (\x y -> x / y) 3 (3:[]) = foldl'' (\x y -> x / y) (\3 3 -> 3 / 3) [] => 3/3 => 1
--- foldl'' (\x y -> x / y) 1 [] = 1 => 1
+-- foldl'' (\x y -> x / y) 1 [] = 1 => 1  
 
 --pembatas
 
-foldl1' x = x
+-- Hypothesis 1
+foldl1'' fn (x:[]) = x
+foldl1'' fn (x:x1:xs) = foldl1'' fn ((fn x x1):xs)
+
+-- foldl1'' (\x y -> x / y) [15,5,3]
+-- foldl1'' (\x y -> x / y) (15:5:[3]) = foldl1'' (\x y -> x / y) ((\15 5 -> 15 / 5):[3])
+-- foldl1'' (\x y -> x / y) (3:3:[]) = foldl1'' (\x y -> x / y) ((\3 3 -> 3 / 3):[])
+-- foldl1'' (\x y -> x / y) (1:[]) = 1
 
 --pembatas
 
