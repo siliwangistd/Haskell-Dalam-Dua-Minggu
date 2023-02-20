@@ -5,8 +5,6 @@ module Kunjaw where
 
 import Data.List
 
-myList = [1..20]
-
 -- 1.a
 
 null' [] = True
@@ -75,11 +73,16 @@ deleteAll' m (x:xs)
 --    | 2 == 2 = deleteAll' 2 [] => []
 -- deleteAll m [] = [] => []
 
-
-
 --pembatas
 
-foldl' x = x
+-- Hypothesis 1
+foldl'' fn m [] = m
+foldl'' fn m (x:xs) = foldl'' fn (fn m x) xs
+
+-- foldl'' (\x y -> x / y) 15 [5,3]
+-- foldl'' (\x y -> x / y) 15 (5:[3]) = foldl'' (\x y -> x / y) (\15 5 -> 15 / 5) (3:[]) => 15/5 => 3
+-- foldl'' (\x y -> x / y) 3 (3:[]) = foldl'' (\x y -> x / y) (\3 3 -> 3 / 3) [] => 3/3 => 1
+-- foldl'' (\x y -> x / y) 1 [] = 1 => 1
 
 --pembatas
 
