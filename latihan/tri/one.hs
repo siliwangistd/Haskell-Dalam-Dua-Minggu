@@ -1,7 +1,7 @@
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
-module Kunjaw where
+module One where
 
 import Data.List
 
@@ -12,9 +12,16 @@ null' xs = False
 
 --pembatas
 
+-- Hypothesis 1
 take' 0 _ = []
 take' m [] = []
 take' m (x:xs) = x : take' (m-1) xs
+
+-- take' 3 [1,2,3,4,5]
+-- take' 3 (1:[2,3,4,5]) = 1 : take' (3-1) [2,3,4,5] => 1:2:[3]
+-- take' 2 (2:[3,4,5]) = 2 : take' (2-1) [3,4,5] => 2:3:[]
+-- take' 1 (3:[4,5]) = 3 : take' (1-1) [4,5] => 3:[]
+-- take' 0 (4:[5]) = [] => []
 
 --pembatas
 
@@ -110,7 +117,16 @@ zip' (x:xs) (y:ys) = (x,y) : zip' xs ys
 
 --pembatas
 
-zipWith' x = x
+-- Hypothesis 1
+zipWith' fn [] _ = []
+zipWith' fn _ [] = []
+zipWith' fn (x:xs) (y:ys) = (fn x y) : zipWith' fn xs ys
+
+-- zipWith' (\x y -> x * y) [1,2,3,4,5] [1,2,3]
+-- zipWith' (\x y -> x * y) (1:[2,3,4,5]) (1:[2,3]) = (\1 1 -> 1 * 1) : zipWith' (\x y -> x * y) (2:[3,4,5]) (2:[3,4]) => 1:4:6:[]
+-- zipWith' (\x y -> x * y) (2:[3,4,5]) (2:[3,4]) =  (\2 2 -> 2 * 2) : zipWith' (\x y -> x * y) (3:[4,5]) (3:[4]) => 4:6:[]
+-- zipWith' (\x y -> x * y) (3:[4,5]) (3:[]) = (\3 3 -> 3 * 3) : zipWith' (\x y -> x * y) (4:[5]) [] => 6:[]
+-- zipWith' (\x y -> x * y) (4:[5]) ([]) = [] => []
 
 --pembatas
 
