@@ -5,8 +5,6 @@ module Kunjaw where
 
 import Data.List
 
-myList = [1..20]
-
 -- 1.a
 
 null' [] = True
@@ -75,19 +73,40 @@ deleteAll' m (x:xs)
 --    | 2 == 2 = deleteAll' 2 [] => []
 -- deleteAll m [] = [] => []
 
+--pembatas
 
+-- Hypothesis 1
+foldl'' fn m [] = m
+foldl'' fn m (x:xs) = foldl'' fn (fn m x) xs
+
+-- foldl'' (\x y -> x / y) 15 [5,3]
+-- foldl'' (\x y -> x / y) 15 (5:[3]) = foldl'' (\x y -> x / y) (\15 5 -> 15 / 5) (3:[]) => 15/5 => 3
+-- foldl'' (\x y -> x / y) 3 (3:[]) = foldl'' (\x y -> x / y) (\3 3 -> 3 / 3) [] => 3/3 => 1
+-- foldl'' (\x y -> x / y) 1 [] = 1 => 1  
 
 --pembatas
 
-foldl' x = x
+-- Hypothesis 1
+foldl1'' fn (x:[]) = x
+foldl1'' fn (x:x1:xs) = foldl1'' fn ((fn x x1):xs)
+
+-- foldl1'' (\x y -> x / y) [15,5,3]
+-- foldl1'' (\x y -> x / y) (15:5:[3]) = foldl1'' (\x y -> x / y) ((\15 5 -> 15 / 5):[3])
+-- foldl1'' (\x y -> x / y) (3:3:[]) = foldl1'' (\x y -> x / y) ((\3 3 -> 3 / 3):[])
+-- foldl1'' (\x y -> x / y) (1:[]) = 1
 
 --pembatas
 
-foldl1' x = x
+-- Hypothesis 1
+zip' [] _ = []
+zip' _ [] = []
+zip' (x:xs) (y:ys) = (x,y) : zip' xs ys
 
---pembatas
-
-zip' x = x
+-- zip' [1,2,3,4,5] [1,2,3]
+-- zip' (1:[2,3,4,5]) (1:[2,3]) = (1,1) : zip' (2:[3,4,5]) (2:[3]) => (1,1):(2,2):(3,3):[]
+-- zip' (2:[3,4,5]) (2:[3]) = (2,2) : zip' (3:[4,5]) (3:[]) => (2,2):(3,3):[]
+-- zip' (3:[4,5]) (3:[]) = (3,3) : zip' (4:[5]) [] => (3,3):[]
+-- zip' (4:[5]) [] = [] => []
 
 --pembatas
 
