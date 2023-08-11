@@ -3,8 +3,8 @@
 -- Data & Functions
 -- Data types
 ---- Primitives
--------- number
--------- char
+-------- number: int, double, float, 
+-------- char: 'a', 'b', 'c'
 -------- boolean
 ---- Collective
 -------- list
