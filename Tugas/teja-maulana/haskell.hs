@@ -75,5 +75,5 @@ apakahAziz nama
 -- myDrop 1 (2:[3,4]) = myDrop (1-1) [3,4]
 -- myDrop 0 [3,4] = [3,4]
 
-myReverse x = x
-myReverse (x:xs) = myReverse : (xs) + [x]
+myReverse [] = []
+myReverse (x:xs) = myReverse (xs) ++ [x]
