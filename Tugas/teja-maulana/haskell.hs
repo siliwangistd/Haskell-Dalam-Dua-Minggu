@@ -21,7 +21,7 @@ apakahAziz nama
     | nama == "Denda" = False
 -- where
 
--- Teori 1 Take
+--  Teori 1 Take
 -- myTake 0 _ = []
 -- myTake a [] = []
 -- myTake a (m:xz) = m : myTake (a-1) xz
@@ -76,5 +76,7 @@ apakahAziz nama
 -- myDrop 0 [3,4] = [3,4]
 
 -- Teori 1 reverse
--- myReverse [] = []
--- myReverse (x:xs) = myReverse (xs) ++ [x]
+myReverse [] = []
+myReverse (x:xs) = myReverse (xs) ++ [x]
+
+mySnd (x,y) = y 
