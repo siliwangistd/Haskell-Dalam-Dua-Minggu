@@ -26,11 +26,11 @@ myDrop m (x:xs) = myDrop (m-1) xs
 
 --pembatas
 
-fst' x = x
+myFst (x,s) = x
 
 --pembatas
 
-snd' x = x
+mySnd (x,s) = s
 
 --pembatas
 
@@ -42,7 +42,7 @@ filter' x = x
 
 --pembatas
 
-delete' x = x
+myDelete x = x
 
 --pembatas
 
