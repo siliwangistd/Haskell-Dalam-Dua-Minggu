@@ -7,6 +7,7 @@ import Data.List
 
 -- 1.a
 
+-- sdfds
 myNull [] = True
 myNull (x:xs) = False
 
