@@ -7,15 +7,22 @@ import Data.List
 
 -- 1.a
 
-null' x = x
+-- sdfds
+myNull [] = True
+myNull (x:xs) = False
+
 
 --pembatas
 
-take' x = x
+myTake 0 _ = []
+myTake a [] = []
+myTake a (m:xz) = m : myTake (a-1) xz
 
 --pembatas
 
-drop' x = x
+myDrop 0 xs = xs
+myDrop m [] = []
+myDrop m (x:xs) = myDrop (m-1) xs
 
 --pembatas
 
