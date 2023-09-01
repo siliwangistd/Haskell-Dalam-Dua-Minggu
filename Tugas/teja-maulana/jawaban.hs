@@ -42,7 +42,8 @@ filter' x = x
 
 --pembatas
 
-myDelete x = x
+myDelete y (x:xs) = if x == y then xs else x  : myDelete y xs
+
 
 --pembatas
 
