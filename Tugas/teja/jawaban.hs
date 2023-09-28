@@ -41,6 +41,7 @@ map' x = x
 filter' x = x
 
 --pembatas
+-- ini masih ada error coba jalanin myDelete 2 [] di REPL - Tri Denda
 m7Delete y [] = []
 myDelete y (x:xs)
     | x == y = xs 
@@ -48,7 +49,8 @@ myDelete y (x:xs)
 
 
 --pembatas
-
+-- Masih belum kelar, coba jalanin myDeleteAll 2 [1,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2] - Tri Denda
+-- nilai 2 di list harus kehapus semua - Tri Denda
 myDeleteAll m [] = []
 myDeleteAll m (y:yx)
     | y == m = yx
