@@ -26,6 +26,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus conv
 - Tuple
 - String
 
+## Kondisi (IF.. THEN.. ELSE..)
+
 ## Fungsi
 
 - _Pattern Matching_
