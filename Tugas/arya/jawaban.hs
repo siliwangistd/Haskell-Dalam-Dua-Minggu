@@ -1,7 +1,7 @@
--- First Assignment
+P-- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
-module Template where
+module jawaban where
 
 import Data.List
 
