@@ -26,26 +26,26 @@ myDrop m (x:xs) = myDrop (m-1) xs
 
 --pembatas
 
-fst' x = x
+myFst (a, b) = a
 
 --pembatas
 
-snd' x = x
+mySnd (a, c) = c
 
 --pembatas
 
-map' x = x
+map x = x
 
 --pembatas
 
 filter' x = x
 
 --pembatas
--- ini masih ada error coba jalanin myDelete 2 [] di REPL - Tri Denda
-m7Delete y [] = []
+
+myDelete y [] = []
 myDelete y (x:xs)
     | x == y = xs 
-    |otherwise = x : myDelete y xs
+    | otherwise = x : myDelete y xs
 
 
 --pembatas
@@ -53,8 +53,8 @@ myDelete y (x:xs)
 -- nilai 2 di list harus kehapus semua - Tri Denda
 myDeleteAll m [] = []
 myDeleteAll m (y:yx)
-    | y == m = yx
-    |otherwise = myDeleteAll  yx
+    | m == y = myDeleteAll m yx
+    | otherwise = y : myDeleteAll m yx
 
 --pembatas
 
