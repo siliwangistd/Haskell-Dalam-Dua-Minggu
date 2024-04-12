@@ -1,15 +1,17 @@
--- First Assignment
--- Reimplement Haskell function
--- DON'T USE GOOGLE
-module Tugase where
+module Coretan where
 
-import Data.List
+square x = x * x
 
--- 1.a
+-- nama "Devin" = "ini devin"
+-- nama "Idan" = "ini idan"
 
-null' x = x
+-- cariOrg nama = if (nama == "Idan") then "keluarin idan" else "ini devin"
 
---pembatas
+cariOrg nama
+  | nama == "Idan" = "ini idan"
+  | nama == "Devin" = "ini devin"
+  | nama == "Epan" = "ini Epan"
+  | otherwise = "org lain"
 
 myTake m [] = []
 myTake 0 _ = []
@@ -21,7 +23,10 @@ myTake m (x:xs) = x : myTake (m-1) xs
 -- myTake 1 (3:[4,5]) = 3 : myTake (1-1) [4,5] => 3:[] => [3]
 -- myTake 0 _ = [] => []
 
---pembatas
+-- myTake 2 [5,3,2,1]
+-- myTake 2 (5:[3,2,1]) = 5 : myTake (2-1) [3,2,1]
+-- myTake 1 (3:[2,1]) = 3 : myTake (1-1) [2,1]
+-- myTake 0 _ = []
 
 myDrop m [] = []
 myDrop 0 p = p
@@ -48,75 +53,27 @@ myDrop m (x:xs) = myDrop (m-1) xs
 -- myDrop 1 (3:[4,5]) = 3 : myDrop (1-1) [4,5]
 -- myDrop 0 _ = []
 
---pembatas
-
 myFst (nama, benda) = nama
-
---pembatas
 
 mySnd (nama, benda) = benda
 
---pembatas
-
-map' x = x
-
---pembatas
-
-filter' x = x
-
---pembatas
-
-delete' x = x
-
---pembatas
-
-deleteAll' x = x
-
---pembatas
-
-foldl' x = x
-
---pembatas
-
-foldl1' x = x
-
---pembatas
-
-zip' x = x
-
---pembatas
-
-zipWith' x = x
-
---pembatas
-
-nth' x = x
-
---pembatas
-
-scanl' x = x
-
---pembatas
-
-scanl1' x = x
-
---pembatas
-
-elem' x = x
-
---pembatas
-
-notElem' x = x
-
---pembatas
-
-myHead (x:xs) = x
+myReverse [] = []
+myReverse (x:xs) = myReverse xs ++ [x]
 
 -- hipotesis 1
--- myHead [6,7,8,9,10]
--- myHead (6:[7,8,9,10]) = 6 
+-- myReverse [1,2,3,4,5]
+-- myReverse (1:[2,3,4,5]) = myReverse [1] ++ []
+-- myReverse (1:[]) = myReverse [1] ++ []
+-- myReverse (1:[]) = myReverse [x] ++ [] SALAH X
 
---pembatas
+-- hipotesis 2
+-- myReverse [1,2,3,4,5]
+-- myReverse (1:[2,3,4,5]) = myReverse [2,3,4,5] ++ [1] -> [5,4,3,2] ++ [1] = [5,4,3,2,1]
+-- myReverse (2:[3,4,5]) = myReverse [3,4,5] ++ [2] -> [5,4,3] ++ [2] = [5,4,3,2]
+-- myReverse (3:[4,5]) = myReverse [4,5] ++ [3] -> [5,4] ++ [3] = [5,4,3]
+-- myReverse (4:[5]) = myReverse [5] ++ [4] -> [5] ++ [4] = [5,4]
+-- myReverse (5:[]) = myReverse [] ++ [5] -> [] ++ [5] = [5]
+-- myReverse [] = []
 
 myLength [] = 0
 myLength (x:xs) = myLength xs + 1
@@ -166,173 +123,6 @@ myLength (x:xs) = myLength xs + 1
 -- myLength (5:[]) = myLength [] + 1
 -- myLength [] = 0
 
---pembatas
+myHead (x:xs) = x
 
-myReverse [] = []
-myReverse (x:xs) = myReverse xs ++ [x]
-
--- hipotesis 1
--- myReverse [1,2,3,4,5]
--- myReverse (1:[2,3,4,5]) = myReverse [1] ++ []
--- myReverse (1:[]) = myReverse [1] ++ []
--- myReverse (1:[]) = myReverse [x] ++ [] SALAH X
-
--- hipotesis 2
--- myReverse [1,2,3,4,5]
--- myReverse (1:[2,3,4,5]) = myReverse [2,3,4,5] ++ [1] -> [5,4,3,2] ++ [1] = [5,4,3,2,1]
--- myReverse (2:[3,4,5]) = myReverse [3,4,5] ++ [2] -> [5,4,3] ++ [2] = [5,4,3,2]
--- myReverse (3:[4,5]) = myReverse [4,5] ++ [3] -> [5,4] ++ [3] = [5,4,3]
--- myReverse (4:[5]) = myReverse [5] ++ [4] -> [5] ++ [4] = [5,4]
--- myReverse (5:[]) = myReverse [] ++ [5] -> [] ++ [5] = [5]
--- myReverse [] = []
-
---pembatas
-
-last' x = x
-
---pembatas
-
-tail' x = x
-
---pembatas
-
-init' x = x
-
---pembatas
-
-max' x = x
-
---pembatas
-
-min' x = x
-
---pembatas
-
-concat' x = x
-
---pembatas
-
-intersperse' x = x
-
---pembatas
-
-intercalate' x = x
-
---pembatas
-
-and' x = x
-
---pembatas
-
-or' x = x
-
---pembatas
-
-zip3' x = x
-
---pembatas
-
-sum' x = x
-
---pembatas
-
-product' x = x
-
---pembatas
-
-words' x = x
-
---pembatas
-
-lines' x = x
-
---pembatas
-
-unlines' x = x
-
---pembatas
-
-unwords' x = x
-
---pembatas
-
-takeWhile' x = x
-
---pembatas
-
-dropWhile' x = x
-
---pembatas
-
-concatMap' x = x
-
---pembatas
-
-all' x = x
-
---pembatas
-
-any' x = x
-
---pembatas
-
-insert' x = x
-
---pembatas
-
-zipWith3' x = x
-
---pembatas
-
--- 1.b
-
-nub' x = x
-
---pembatas
-
-sort' x = x
-
---pembatas
-
-minimum' x = x
-
---pembatas
-
-maximum' x = x
-
---pembatas
-
-inits' x = x
-
---pembatas
-
-tails' x = x
-
---pembatas
-
-union' x = x
-
---pembatas
-
-intersect' x = x
-
---pembatas
-
-group' x = x
-
---pembatas
-
-splitAt' x = x
-
---pembatas
-
-partition' x = x
-
---pembatas
-
-replicate' x = x
-
---pembatas
--- First Assignment
--- Reimplement Haskell function
--- DON'T USE GOOGLE
+myLast (x:xs) = xs
