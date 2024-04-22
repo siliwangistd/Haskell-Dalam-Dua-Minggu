@@ -55,13 +55,15 @@ myDeleteAll y (x:xs)
  | y == x = myDeleteAll y xs
  | otherwise = x : myDeleteAll y xs
 
---pembatas
-
-foldl' x = x
 
 --pembatas
 
-foldl1' x = x
+myFoldl' f y [] = y
+myFoldl' f y (x:xs) = myFoldl' f (f y x) xs
+
+--pembatas
+
+foldl1'' x = x
 
 --pembatas
 
