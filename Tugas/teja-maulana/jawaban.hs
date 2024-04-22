@@ -38,7 +38,11 @@ map' x = x
 
 --pembatas
 
-filter' x = x
+myFilter _ [] = []
+myFilter f (x:xs)
+ | f x == True = x : myFilter f xs
+ | otherwise = myFilter f xs
+
 
 myDelete y (x:xs) = if x == y then xs else x  : myDelete y xs
 
