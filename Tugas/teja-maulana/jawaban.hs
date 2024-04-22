@@ -40,14 +40,15 @@ map' x = x
 
 filter' x = x
 
---pembatas
-
 myDelete y (x:xs) = if x == y then xs else x  : myDelete y xs
 
 
 --pembatas
 
-deleteAll' x = x
+myDeleteAll y [] = []
+myDeleteAll y (x:xs)
+ | y == x = myDeleteAll y xs
+ | otherwise = x : myDeleteAll y xs
 
 --pembatas
 
