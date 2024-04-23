@@ -62,9 +62,8 @@ myFoldl' f y [] = y
 myFoldl' f y (x:xs) = myFoldl' f (f y x) xs
 
 --pembatas
-
-foldl1'' x = x
-
+myFoldl1'' _ [x] = x
+myFoldl1'' f (x:xs) = myFoldl' f x xs
 --pembatas
 
 myZip [] _ = []
@@ -73,7 +72,10 @@ myZip (x:xs) (m:my) = (x,m) : myZip xs my
 
 --pembatas
 
-zipWith' x = x
+myZipWith f [] [] = []
+myZipWith f [] _ = []
+myZipWith f _ [] = []
+myZipWith f (m:ms) (x: xs) = (f m x) : (myZipWith f ms xs)
 
 --pembatas
 
@@ -84,8 +86,9 @@ nth' x = x
 myScanl f m [] = [m]
 myScanl f m (x:xs) = m : myScanl f (f m x) xs
 
---  cara kerja myScanl adalah memasukan inputan kedua kedalam list
---  kemudian 
+--  cara kerja myScanl adalah:
+--  yang pertama memasukan inputan kedua kedalam list
+--  kemudian menjumblahkan inputan kedua dengan imputan ketiga, dan inputan ketiga masing masing saling menjumlahkan hasil.
 
 scanl1' x = x
 
