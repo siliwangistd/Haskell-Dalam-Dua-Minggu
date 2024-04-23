@@ -67,7 +67,9 @@ foldl1'' x = x
 
 --pembatas
 
-zip' x = x
+myZip [] _ = []
+myZip _ [] = []
+myZip (x:xs) (m:my) = (x,m) : myZip xs my
 
 --pembatas
 
@@ -79,9 +81,11 @@ nth' x = x
 
 --pembatas
 
-scanl' x = x
+myScanl f m [] = [m]
+myScanl f m (x:xs) = m : myScanl f (f m x) xs
 
---pembatas
+--  cara kerja myScanl adalah memasukan inputan kedua kedalam list
+--  kemudian 
 
 scanl1' x = x
 
