@@ -1,43 +1,39 @@
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
-module Jawaban where
+module Template where
 
 import Data.List
 
 -- 1.a
 
--- sdfds
-myNull [] = True
-myNull (x:xs) = False
+null' [] = True
+null' (_:[]) = False
 
 
 --pembatas
 
-myTake 0 _ = []
-myTake a [] = []
-myTake a (m:xz) = m : myTake (a-1) xz
-
-
-
+take' m [] = []
+take' 0 _ = []
+take' m (x:xs) = [x] : take' (m-1) xs
 
 --pembatas
 
-myDrop 0 xs = xs
-myDrop m [] = []
-myDrop m (x:xs) = myDrop (m-1) xs
+drop' m [] = []
+drop' 0 xs = xs
+drop' m (x:xs) = drop' (m-1) xs
 
 --pembatas
 
-myFst (a, b) = a
+fst' x = x
 
 --pembatas
 
-mySnd (a, c) = c
+snd' x = x
 
 --pembatas
 
-map x = x
+map' x = x
 
 --pembatas
 
@@ -45,19 +41,11 @@ filter' x = x
 
 --pembatas
 
-myDelete y [] = []
-myDelete y (x:xs)
-    | x == y = xs 
-    | otherwise = x : myDelete y xs
-
+delete' x = x
 
 --pembatas
--- Masih belum kelar, coba jalanin myDeleteAll 2 [1,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2] - Tri Denda
--- nilai 2 di list harus kehapus semua - Tri Denda
-myDeleteAll m [] = []
-myDeleteAll m (y:yx)
-    | m == y = myDeleteAll m yx
-    | otherwise = y : myDeleteAll m yx
+
+deleteAll' x = x
 
 --pembatas
 

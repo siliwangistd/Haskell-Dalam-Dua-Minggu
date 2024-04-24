@@ -45,6 +45,8 @@ apakahSoffan nama
   | otherwise = False
   where iniBlagoo = "Blagoo"
 
+
+
   
 
 
