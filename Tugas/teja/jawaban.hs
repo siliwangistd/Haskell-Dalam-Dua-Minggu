@@ -18,9 +18,6 @@ myTake 0 _ = []
 myTake a [] = []
 myTake a (m:xz) = m : myTake (a-1) xz
 
-
-
-
 --pembatas
 
 myDrop 0 xs = xs
@@ -29,100 +26,120 @@ myDrop m (x:xs) = myDrop (m-1) xs
 
 --pembatas
 
-myFst (a, b) = a
+myFst (x,s) = x
 
 --pembatas
 
-mySnd (a, c) = c
+mySnd (x,s) = s
 
 --pembatas
 
-map x = x
+myMap f [] = []
+myMap f (x:xs) = f x : myMap f xs
 
 --pembatas
 
-filter' x = x
+myFilter _ [] = []
+myFilter f (x:xs)
+ | f x == True = x : myFilter f xs
+ | otherwise = myFilter f xs
+
+
+myDelete y (x:xs) = if x == y then xs else x  : myDelete y xs
+
 
 --pembatas
 
-myDelete y [] = []
-myDelete y (x:xs)
-    | x == y = xs 
-    | otherwise = x : myDelete y xs
+myDeleteAll y [] = []
+myDeleteAll y (x:xs)
+ | y == x = myDeleteAll y xs
+ | otherwise = x : myDeleteAll y xs
 
 
 --pembatas
--- Masih belum kelar, coba jalanin myDeleteAll 2 [1,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2] - Tri Denda
--- nilai 2 di list harus kehapus semua - Tri Denda
-myDeleteAll m [] = []
-myDeleteAll m (y:yx)
-    | m == y = myDeleteAll m yx
-    | otherwise = y : myDeleteAll m yx
+
+myFoldl' f y [] = y
+myFoldl' f y (x:xs) = myFoldl' f (f y x) xs
 
 --pembatas
 
-foldl' x = x
+myFoldl1'' _ [x] = x
+myFoldl1'' f (x:xs) = myFoldl' f x xs
 
 --pembatas
 
-foldl1' x = x
+myZip [] _ = []
+myZip _ [] = []
+myZip (x:xs) (m:my) = (x,m) : myZip xs my
 
 --pembatas
 
-zip' x = x
+myZipWith f [] [] = []
+myZipWith f [] _ = []
+myZipWith f _ [] = []
+myZipWith f (m:ms) (x: xs) = (f m x) : (myZipWith f ms xs)
 
 --pembatas
 
-zipWith' x = x
+myNth x = x
 
 --pembatas
 
-nth' x = x
+myScanl f m [] = [m]
+myScanl f m (x:xs) = m : myScanl f (f m x) xs
+
+--  cara kerja myScanl adalah:
+--  yang pertama memasukan inputan kedua kedalam list
+--  kemudian menjumblahkan inputan kedua dengan imputan ketiga, dan inputan ketiga masing masing saling menjumlahkan hasil.
+
+myScanl1 x = x
+
+--pembatas
+myElem _ [] = False
+myElem y (x:xs)
+ | x == y = True
+ | otherwise = myElem y xs
 
 --pembatas
 
-scanl' x = x
+myNotElem _ [] = True
+myNotElem y (x:xs)
+ | x == y = False
+ | otherwise = myNotElem y xs
 
 --pembatas
 
-scanl1' x = x
+
+myHead (x:xs) = x
+--pembatas
+
+myLength [] = 0
+myLength (x:xs) = 1 + myLength xs
 
 --pembatas
 
-elem' x = x
+myReverse [] = []
+myReverse (x:xs) = myReverse (xs) ++ [x]
 
 --pembatas
 
-notElem' x = x
+myLast [x] = x
+myLast (_:xs) = myLast xs
 
 --pembatas
 
-head' x = x
+myTail (_:xs) = xs
 
 --pembatas
 
-length' x = x
+myInit [x] = []
+myInit (x:xs) = x : myInit xs
 
 --pembatas
 
-reverse' x = x
-
---pembatas
-
-last' x = x
-
---pembatas
-
-tail' x = x
-
---pembatas
-
-init' x = x
-
---pembatas
-
-max' x = x
-
+mayMax x y
+    | x >= y = x
+    
 --pembatas
 
 min' x = x
@@ -257,3 +274,4 @@ replicate' x = x
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
+
