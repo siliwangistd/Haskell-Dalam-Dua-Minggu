@@ -102,7 +102,10 @@ myElem y (x:xs)
 
 --pembatas
 
-notElem' x = x
+myNotElem _ [] = True
+myNotElem y (x:xs)
+ | x == y = False
+ | otherwise = myNotElem y xs
 
 --pembatas
 
