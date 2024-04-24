@@ -62,8 +62,10 @@ myFoldl' f y [] = y
 myFoldl' f y (x:xs) = myFoldl' f (f y x) xs
 
 --pembatas
+
 myFoldl1'' _ [x] = x
 myFoldl1'' f (x:xs) = myFoldl' f x xs
+
 --pembatas
 
 myZip [] _ = []
@@ -79,7 +81,7 @@ myZipWith f (m:ms) (x: xs) = (f m x) : (myZipWith f ms xs)
 
 --pembatas
 
-nth' x = x
+myNth x = x
 
 --pembatas
 
@@ -90,11 +92,13 @@ myScanl f m (x:xs) = m : myScanl f (f m x) xs
 --  yang pertama memasukan inputan kedua kedalam list
 --  kemudian menjumblahkan inputan kedua dengan imputan ketiga, dan inputan ketiga masing masing saling menjumlahkan hasil.
 
-scanl1' x = x
+myScanl1 x = x
 
 --pembatas
-
-elem' x = x
+myElem _ [] = False
+myElem y (x:xs)
+ | x == y = True
+ | otherwise = myElem y xs
 
 --pembatas
 
