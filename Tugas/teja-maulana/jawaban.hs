@@ -113,7 +113,8 @@ myNotElem y (x:xs)
 myHead (x:xs) = x
 --pembatas
 
-length' x = x
+myLength [] = 0
+myLength (x:xs) = 1 + myLength xs
 
 --pembatas
 
