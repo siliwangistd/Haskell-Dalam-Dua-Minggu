@@ -118,7 +118,8 @@ myLength (x:xs) = 1 + myLength xs
 
 --pembatas
 
-reverse' x = x
+myReverse [] = []
+myReverse (x:xs) = myReverse (xs) ++ [x]
 
 --pembatas
 
