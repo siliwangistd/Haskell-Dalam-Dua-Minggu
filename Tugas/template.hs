@@ -7,106 +7,133 @@ import Data.List
 
 -- 1.a
 
+-- Difficulty: Easy
 null' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 take' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 drop' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 fst' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 snd' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 map' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 filter' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 delete' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 deleteAll' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 foldl' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 foldl1' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 zip' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 zipWith' x = x
 
 --pembatas
 
+-- Difficulty: Easy
 nth' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 scanl' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 scanl1' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 elem' x = x
 
 --pembatas
 
+-- Difficulty: Hard
 notElem' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 head' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 length' x = x
 
 --pembatas
 
+-- Difficulty: Medium
 reverse' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 last' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 tail' x = x
 
 --pembatas
 
+-- Difficulty: Very Easy
 init' x = x
 
 --pembatas
 
+
+-- Difficulty: Easy
 max' x = x
 
 --pembatas
 
+-- Difficulty: Easy
 min' x = x
 
 --pembatas
