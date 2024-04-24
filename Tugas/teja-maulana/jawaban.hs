@@ -123,20 +123,23 @@ myReverse (x:xs) = myReverse (xs) ++ [x]
 
 --pembatas
 
-last' x = x
+myLast [x] = x
+myLast (_:xs) = myLast xs
 
 --pembatas
 
-tail' x = x
+myTail (_:xs) = xs
 
 --pembatas
 
-init' x = x
+myInit [x] = []
+myInit (x:xs) = x : myInit xs
 
 --pembatas
 
-max' x = x
-
+mayMax x y
+    | x >= y = x
+    
 --pembatas
 
 min' x = x
