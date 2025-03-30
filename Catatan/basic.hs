@@ -1,4 +1,4 @@
-module Basic where
+module Basic (iniDevin) where
 
 myName = "Tri Denda"
 
